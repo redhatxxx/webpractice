@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="js/cookieopreration.js" >
+	
+</script>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script>
+		window.onload = function(){
+			var username = getCookie("username");
+				if(username!=""&&username!="null"){
+					document.getElementById("usertitle").innerHTML=username;
+				}
+				else
+					document.getElementById("usertitle").innerHTML="游客";
+
+		}
+		</script>
+	</head>
+	<body>
+		<label id="usertitle"></label>
+		<a href="javascript:void(0)" onclick="logout()">注销</a>
+		<br>
+		<button onclick="showmsg()">test</button>
+	</body>
+</html>
