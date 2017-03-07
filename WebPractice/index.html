@@ -11,17 +11,50 @@
 			var username = getCookie("username");
 				if(username!=""&&username!="null"){
 					document.getElementById("usertitle").innerHTML=username;
+					//visibility不显示但占用位置会有空白
+					//document.getElementById("jumplogin").style.visibility="hidden";
+					document.getElementById("jumplogin").style.display="none";
 				}
-				else
+				else{
 					document.getElementById("usertitle").innerHTML="游客";
-
+					//document.getElementById("logout").style.visibility="hidden";
+					document.getElementById("logout").style.display="none";
+				}
+				document.getElementById("manager").style.display="none";
 		}
 		</script>
 	</head>
 	<body>
-		<label id="usertitle"></label>
-		<a href="javascript:void(0)" onclick="logout()">注销</a>
+		<div align="right">
+			<label id="usertitle"></label>
+			<a id="logout" href="javascript:void(0)" onclick="logout()">注销</a>
+			<a id="jumplogin" href="javascript:void(0)" onclick="logout()">登录</a>
+			<a id="manager" href="javascript:void(0)" onclick="jumpmanager()">管理员入口</a>
+		</div>
 		<br>
-		<button onclick="showmsg()">test</button>
+		<div align="center">
+			<img src="" />
+			<a href="javascript:void(0)" onclick="">首页</a>
+			<a href="javascript:void(0)" onclick="">精彩活动</a>
+			<a href="javascript:void(0)" onclick="">昨日回忆</a>
+			<a href="javascript:void(0)" onclick="">我们的团队</a>
+			<a href="javascript:void(0)" onclick="">加入我们</a>
+		</div>
+		<div align="center">
+			<table border="1">
+				<tr>
+					<th><label>num</label></th>
+					<th><label>活动名称</label></th>
+					<th><label>活动时间</label></th>
+					<th><label>领队</label></th>
+				</tr>
+				<tr>
+					<td><label>1</label></td>
+					<td><a href="">库布齐沙漠</a></td>
+					<td><label>2017-4-2</label></td>
+					<td><a href="">东东</a></td>
+				</tr>
+			</table>
+		</div>
 	</body>
 </html>
