@@ -35,3 +35,7 @@ function delCookie(paraname){
 	datetime.setTime(datetime.getTime()-1000);
 	document.cookie=paraname+"=a;expires="+datetime.toGMTString();
 }
+
+function js2(){
+	alert("js2");
+}
